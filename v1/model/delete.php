@@ -5,7 +5,7 @@ require_once("creds.php");
 
 $city_name = $_POST["city_name"];
 
-$stmt = $pdo->prepare("DELETE FROM movies WHERE name = ?");
+$stmt = $pdo->prepare("DELETE FROM city_weather WHERE name = ?");
 $deleted = $stmt->execute([$city_name]);
 
 http_response_code(200);
