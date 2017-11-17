@@ -19,7 +19,7 @@ function btnUpdate() {
         url: 'http://darcikhey.com/api/v1/weather/city/update/',
         data: { city_name: name },
         success: function (data) {
-            $("#code").append(JSON.stringify(data));
+            $("#code-update").append(JSON.stringify(data));
         }
     });
 }
@@ -36,7 +36,7 @@ function btnAddCity() {
         success: function (data) {
             console.log("loggin data");
             console.log(data)
-            $("#code").append(JSON.stringify(data));
+            $("#code-post").append(JSON.stringify(data));
             // var id = data[0].id;
             // var name = data[0].name;
             // var cityID = data[0].cityID;
