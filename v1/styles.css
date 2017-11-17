@@ -12,3 +12,11 @@ pre {
     font-size: small;
     color: #c12e2a;
 }
+#code-delete,
+#code-update,
+#code-get,
+#code-post {
+    font-family: Courier New, Courier, monospace;
+    font-size: small;
+    color: #c12e2a;
+}
