@@ -17,4 +17,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*weather/city/update*) model/update.php/$1 [L]
 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*weather/city/delete*) model/delete.php/$1 [L]
+
 ErrorDocument 403 /Page-Not-Found.html
