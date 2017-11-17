@@ -9,6 +9,6 @@ $stmt = $pdo->prepare("DELETE FROM city_weather WHERE name = ?");
 $deleted = $stmt->execute([$city_name]);
 
 http_response_code(200);
-echo "{status: $city_name . ' was deleted'}"
+echo json_encode(array("status"=>$city_name. " has been deleted"));
 
 ?>
