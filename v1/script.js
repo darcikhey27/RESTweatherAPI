@@ -5,12 +5,23 @@ function init() {
     $("#btn-add-post").on("click", btnAddCity);
     $("#btn-add-get").on("click", btnGetCityName);
     $("#btn-update").on("click", btnUpdate);
+    $("#btn-delete").on("click", btnDelete);
     $("#btn-refresh").on("click", btnRefreshCity);
     $("#btn-delete").on("click", btnDeleteCity);
     
 }
 
-
+function btnDelete() {
+    var name = $("#city-name-delete").val();
+    $.ajax({
+        type: 'POST',
+        url: 'http://darcikhey.com/api/v1/weather/city/delete/',
+        data: { city_name: name },
+        success: function (data) {
+            $("#code-delete").append(JSON.stringify(data));
+        }
+    });
+}
 
 function btnUpdate() {
     var name = $("#city-name-update").val();
