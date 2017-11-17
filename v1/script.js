@@ -4,8 +4,24 @@ function init() {
     $.ajaxSetup({ cache: false, dataType: "json" });
     $("#btn-add-post").on("click", btnAddCity);
     $("#btn-add-get").on("click", btnGetCityName);
+    $("#btn-update").on("click", btnUpdate);
     $("#btn-refresh").on("click", btnRefreshCity);
     $("#btn-delete").on("click", btnDeleteCity);
+    
+}
+
+
+
+function btnUpdate() {
+    var name = $("#city-name-update").val();
+    $.ajax({
+        type: 'POST',
+        url: 'http://darcikhey.com/api/v1/weather/city/update/',
+        data: { city_name: name },
+        success: function (data) {
+            $("#code").append(JSON.stringify(data));
+        }
+    });
 }
 
 /* add a city when the user types in the city name */
