@@ -1,0 +1,7 @@
+.widget {
+    width: 200px;
+    height: 250px;
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 10px;
+}

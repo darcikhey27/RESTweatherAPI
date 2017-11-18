@@ -1,0 +1,5 @@
+[16-Nov-2017 07:24:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'darcikhe_weather.city_weather' doesn't exist in /home1/darcikhe/public_html/cscd378/api/model/get.php:27
+Stack trace:
+#0 /home1/darcikhe/public_html/cscd378/api/model/get.php(27): PDO->prepare('SELECT * FROM c...')
+#1 {main}
+  thrown in /home1/darcikhe/public_html/cscd378/api/model/get.php on line 27
